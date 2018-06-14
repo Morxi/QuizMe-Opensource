@@ -1,0 +1,41 @@
+/* quiz.wxss */
+.canvas {
+
+  opacity:0.6;
+  background-color: white;
+}
+.controlButtons2
+{
+
+  position:absolute;
+  z-index:2;
+}
+.controlButtons
+{
+
+  position:absolute;
+  left:0px;
+  top:0px;
+  z-index:1;
+}
+page{
+  background-color: #ffffff;
+}
+.isRight{
+  background-color: greenyellow;
+  align-content: center;
+}
+.headLine{
+  margin: 50rpx;
+}
+.selection{
+  margin-left: 10%;
+  margin-top:20rpx;
+  margin-right: 10%;
+}
+.answertext{
+  margin: 10px;
+  max-height:90%;
+  margin-inline-end: 8px;
+}
+

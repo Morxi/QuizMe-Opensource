@@ -1,0 +1,8 @@
+var current=0;
+var currentPlus = function(){
+  current = current+1;
+}
+module.exports = {
+  cur: current,
+  plus: currentPlus,
+};

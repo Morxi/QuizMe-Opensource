@@ -1,0 +1,8 @@
+{
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "答题",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  
+}

@@ -1,0 +1,30 @@
+page{
+  background-color: #ffffff;
+}
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+button::after{
+border: none;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.abouts{
+  /* font-size: 17pt; */
+  margin: 70rpx;
+   padding: 20rpx;
+}

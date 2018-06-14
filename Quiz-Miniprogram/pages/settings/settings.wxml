@@ -1,0 +1,39 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__bd">
+       
+
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_switch">
+                <view class="weui-cell__bd">倒计时开关</view>
+                <view class="weui-cell__ft">
+                    <switch checked='{{switchs}}' bindchange='switchTap' />
+                </view>
+            </view> <view class="weui-cell weui-cell_switch">
+                <view class="weui-cell__bd">答题正确后进入下一题</view>
+                <view class="weui-cell__ft">
+                    <switch checked='{{jumps}}' bindchange='jumpTap' />
+                </view>
+            </view>
+        </view>
+        {{}}
+        <view class="page__bd">
+           <view class="weui-cells__title">速度控制(由于JS的执行效率体现在各手机平台上不同，故不提供准确数字，值越大倒计时越快)</view>
+      <view class="weui-cells weui-cells_after-title">
+         <view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell weui-cell_slider">
+                      <slider min='5' step='4' value="{{countSpeed}}" class="weui-cell__bd" bindchange="slider1change"/>
+                 </view>            
+              </view>
+          </view>
+      </view>
+
+    </view>
+    </view>
+
+     <view class="page__hd page__bd_spacing">
+             <view class="button-sp-area">
+                <button class="weui-btn" type="primary" bindtap='saveSet'>保存设置</button>
+                  <button class="weui-btn" type="warn" bindtap='cleanall'>删档重来</button>
+        </view>
+    </view>
+

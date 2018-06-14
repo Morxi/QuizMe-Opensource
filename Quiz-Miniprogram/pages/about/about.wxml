@@ -1,0 +1,20 @@
+<view class="container">
+  <button plain="true" open-type='contact'>
+  <view class="userinfo">
+    <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>wx:else -->
+    <block>
+  
+      <image bindtap="bindViewTap"  class="userinfo-avatar" src="https://www.morusang.com/quiz/avator.jpg" background-size="cover"></image>
+      </block>
+         <block><contact-button type="default-dark" size="20" session-from="weapp"></contact-button><text class="userinfo-nickname page">联系作者:墨羲 </text>  </block>
+      
+      <!-- <text class="userinfo-nickname weui-cells__tips" >点击此处联系作者 </text> -->
+    
+    
+  </view>
+    </button>
+  </view>
+  <view class="abouts">
+    <rich-text style='abouts'  nodes='{{about}}'></rich-text>
+  </view>
+

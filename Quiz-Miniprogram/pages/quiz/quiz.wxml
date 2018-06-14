@@ -1,0 +1,30 @@
+<view class='questioncainer'>
+<progress percent="{{curPercent}}" stroke-width="10" color='{{progessColor}}' />
+
+<view class="headLine"><text class="headLine">{{cur}}.{{question}}</text></view>
+
+<button bindtap="clickMe" class="selection" id='1'><text class='answertext'>{{sel1}}</text></button>
+<button bindtap="clickMe" class="selection" id='2'><text class='answertext'>{{sel2}}</text></button>
+<button bindtap="clickMe" class="selection" id='3'><text class='answertext'>{{sel3}}</text></button>
+<button bindtap="clickMe" class="selection" id='4'><text class='answertext'>{{sel4}}</text></button>
+<view class='container page__hd'>
+
+<text style='color:red'>{{errorState}}</text>
+<text style='color:#2980b9' wx:if="{{displayAddons == 1}}">{{addons}}</text>
+
+<button wx:if="{{isJumped}}" bindtap='nextTap'>下一题</button>
+
+<button class='weui-cells weui-cells__tips'  bindtap='reportBug'	session-from="{{question}}" wx:if="{{errorState != '' && errorState != 'null'}}">
+<text>题目报错</text>
+</button>
+
+</view>
+<view class='.weui-footer'>提示：下拉可开启草稿纸</view>
+<view class='.weui-footer'>设置界面可调整倒计时速度</view>
+</view>
+<view wx:if="{{memoSwitch}}" class= ".weui-footer_fixed-bottom controlButtons">
+ <canvas class="canvas" style="width: 100%; height: 82%;" id="canvas" canvas-id="canvas" disable-scroll="true" bindtouchstart="touchstart" bindtouchmove="touchmove"  bindtouchend="canvasEnd" touchcancel="canvasEnd" binderror="canvasIdErrorCallback"></canvas>
+
+  <button type="default" bindtap="cleardraw" >清除画布</button>
+  <button type="default" bindtap="onExitTap" >退出草稿纸</button>
+</view>

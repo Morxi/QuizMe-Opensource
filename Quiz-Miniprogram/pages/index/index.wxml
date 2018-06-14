@@ -1,0 +1,76 @@
+<!--  /**
+ * 首页
+ * Creator：墨羲
+ * morxislab
+ */-->
+
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">有人说: </view>
+
+    <text class="selction_gray" wx:if="{{sayin.length>3}}">{{sayin}}</text>
+    <!-- 当无网络时显示下面这一句，优化用户体验 -->
+    <text class="selction_gray" wx:else>永远相信美好的事情即将发生</text>
+  </view>
+  <view class="page__bd page__bd_spacing">
+    <view class="kind-list">
+
+      <!-- 选单列表 -->
+      <view class="kind-list__item">
+     
+        <view class="weui-flex kind-list__item-hd {{isQuizOpen ? 'kind-list__item-hd_show' : ''}}" bindtap="quizToggle">
+          <view class="weui-flex__item">来刷题</view>
+          <image class="kind-list__img" src="/pages/images/icon_nav_calendar.svg"></image>
+        </view>
+        <view class="kind-list__item-bd {{isQuizOpen ? 'kind-list__item-bd_show' : ''}}">
+          <view class="weui-cells {{isQuizOpen ? 'weui-cells_show' : ''}}">
+
+            <navigator class="weui-cell weui-cell_access" url="/pages/quiz/quiz?id=1">
+              <view class="weui-cell__bd" indtap='aboutQuiz'>计算机专业课</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" bindtap='classSelector'>
+              <view class="weui-cell__bd" indtap='aboutQuiz'>文化综合</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+
+            <navigator class="weui-cell weui-cell_access">
+              <view class="weui-msg__desc" indtap='aboutQuiz' disabled='disabled'>其他科目敬请期待</view>
+            </navigator>
+          </view>
+        </view>
+
+        <view class="weui-flex kind-list__item-hd" bindtap="customSetting">
+          <view class="weui-flex__item">设置</view>
+          <image class="kind-list__img" src="/pages/images/icon_nav_set.svg"></image>
+        </view>
+
+        <view class="weui-flex kind-list__item-hd {{isAboutOpen ? 'kind-list__item-hd_show' : ''}}" bindtap="customToggle">
+          <view class="weui-flex__item">更多选项</view>
+          <image class="kind-list__img" src="/pages/images/icon_nav_more.svg"></image>
+        </view>
+        <view class="kind-list__item-bd {{isAboutOpen ? 'kind-list__item-bd_show' : ''}}">
+          <view class="weui-cells {{isAboutOpen ? 'weui-cells_show' : ''}}">
+            <navigator class="weui-cell weui-cell_access" url="/pages/logs/logs">
+              <view class="weui-cell__bd" indtap='aboutQuiz'>刷题历史</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" url="/pages/about/about">
+              <view class="weui-cell__bd" indtap='aboutQuiz'>关于QuizMe</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <!-- 显示版本 -->
+            <navigator class="weui-cell_access home-footer" style='color: #999;'>
+              <view>当前客户端版本：v1.00</view>
+              <view>当前服务端版本：{{version}}</view>
+              <view>当前微信客户端API版本:{{wxVersion}}</view>
+            </navigator>
+
+
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <text class="weui-footer weui-footer_fixed-bottom " wx:if="{{!isAboutOpen}}">QuizMe开源版 Powered by Morxi </text>
+</view>

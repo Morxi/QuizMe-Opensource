@@ -1,0 +1,8 @@
+<!--logs.wxml-->
+<view class="container">
+<text class='headline' style='text-align:center'>
+  在过去的 {{days}} 天里，
+  你一共打开了QuizMe {{logs}} 次
+  在这期间，你一共刷了{{questnumber}}道题
+  </text>
+</view>
